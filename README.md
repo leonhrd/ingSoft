@@ -3,4 +3,4 @@ Karol Gomez
 Daniel Llanito
 Ernesto Ramirez
 Guillermo Peasland
-Antonio González
+Luis Antonio González
