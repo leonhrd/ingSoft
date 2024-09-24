@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Cotización</title>
+    <link rel="stylesheet" type="text/css" href="styles-form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Solicitud de Cotización</h1>
+    </header>
+
+    <section class="formulario-cotizacion">
+        <h2>Por favor, rellene los siguientes datos</h2>
+        <form id="cotizacionForm" action="guardar-datos.php" method="post">
+            
+            <label for="nombre">Nombre del cliente:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="descripcion">Descripción del proyecto:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+            <label for="tipos-datos">Tipos de datos disponibles:</label>
+            <input type="text" id="tipos-datos" name="tipos-datos">
+
+            <label for="servicio">¿Qué tipo de servicio requiere? (Seleccione uno o más):</label>
+            <div class="servicios-opciones">
+                <input type="checkbox" id="analisis-predictivo" name="servicio[]" value="Analisis Predictivo">
+                <label for="analisis-predictivo">Análisis Predictivo</label>
+
+                <input type="checkbox" id="mineria-datos" name="servicio[]" value="Mineria de Datos">
+                <label for="mineria-datos">Minería de Datos</label>
+
+                <input type="checkbox" id="big-data" name="servicio[]" value="Big Data">
+                <label for="big-data">Big Data</label>
+
+                <input type="checkbox" id="consultoria" name="servicio[]" value="Consultoria">
+                <label for="consultoria">Consultoría</label>
+
+                <input type="checkbox" id="visualizacion-datos" name="servicio[]" value="Visualizacion de Datos">
+                <label for="visualizacion-datos">Visualización de Datos</label>
+            </div>
+
+            <label for="presupuesto">Presupuesto estimado:</label>
+            <input type="number" id="presupuesto" name="presupuesto" min="0" required>
+
+            <label for="plazos">Plazos y fechas clave:</label>
+            <input type="text" id="plazos" name="plazos" required>
+
+            <button type="submit" class="btn-enviar">Enviar Cotización</button>
+        </form>
+    </section>
+
+    <script src="scripts-form.js"></script>
+</body>
+</html>
